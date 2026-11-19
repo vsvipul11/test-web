@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" class="is-locked">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Jhanvi &amp; Abhinav — 05 · 12 · 2026</title>
+<meta name="description" content="One boy. One girl. Almost twelve years of us. From Class 6 to “I do.”">
+<meta name="theme-color" content="#f4ecdd">
+<meta property="og:title" content="Jhanvi &amp; Abhinav — 05 · 12 · 2026">
+<meta property="og:description" content="From Class 6 to “I do.” Join our forever.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/monogram.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Cormorant+Garamond:ital,wght@0,300..600;1,300..600&family=Courier+Prime&family=Jost:wght@300..500&family=Mrs+Saint+Delafield&family=Rozha+One&family=Tiro+Devanagari+Hindi&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=519f672e">
+</head>
+<body>
+
+<canvas id="back" aria-hidden="true"></canvas>
+<canvas id="front" aria-hidden="true"></canvas>
+<canvas id="motes" aria-hidden="true"></canvas>
+<div class="grain" aria-hidden="true"></div>
+
+<!-- the invitation, sealed -->
+<div id="gate" class="gate">
+  <div class="door door--l"><i class="door__line"></i></div>
+  <div class="door door--r"><i class="door__line"></i></div>
+  <div class="gate__copy">
+    <p class="cap">One boy. One girl.<br>Almost twelve years of us.</p>
+    <button id="seal" class="seal" type="button" aria-label="Break the seal and open the invitation">
+      <span class="seal__h seal__h--l"><img src="assets/art/seal.webp" alt=""></span>
+      <span class="seal__h seal__h--r"><img src="assets/art/seal.webp" alt=""></span>
+      <svg class="seal__m" viewBox="80 20 900 1045" aria-hidden="true"><path id="sealMark" fill-rule="evenodd"/></svg>
+    </button>
+    <h1 class="gate__names">Jhanvi <i>&amp;</i> Abhinav</h1>
+    <p class="gate__date">05 · 12 · 2026</p>
+    <p class="gate__hint"><span id="hint">Opening the invitation…</span></p>
+    <button id="muteGate" class="gate__mute" type="button" aria-pressed="true">Music on</button>
+  </div>
+</div>
+
+<header class="top">
+  <button id="home" class="top__mark" type="button" aria-label="Back to the start"><svg viewBox="80 20 900 1045" aria-hidden="true"><path id="topMark" fill-rule="evenodd"/></svg></button>
+  <span id="where" class="top__where">Prem Kahani</span>
+  <div class="top__r">
+    <button id="snd" class="top__snd" type="button" aria-pressed="false" aria-label="Music"><i></i><i></i><i></i></button>
+    <a class="top__rsvp" href="#album">Album</a>
+  </div>
+</header>
+
+<div id="prog" class="prog" aria-hidden="true"><i></i></div>
+<div id="cue" class="cue" aria-hidden="true"><span>Scroll down</span><b></b><i></i><i></i></div>
+<nav id="fnav" class="fnav" aria-label="Our story">
+  <button id="navBack" class="fnav__back" type="button" aria-label="Back" hidden><i></i></button>
+  <button id="navNext" class="fnav__next" type="button"><span>Next</span><i></i></button>
+</nav>
+
+<main>
+  <div id="film" class="film"></div>
+
+  <section id="wishes" class="wishes" aria-labelledby="wishesTitle">
+    <div class="wishes__write">
+      <div class="wishes__head">
+        <p class="cap">Before you go</p>
+        <h2 id="wishesTitle" class="wishes__title">Your blessings<br><i>&amp; good words</i></h2>
+        <p class="wishes__lede">A wish, a memory, a little marriage advice, or just a hello. Write it here and it stays on this page with us.</p>
+      </div>
+      <form id="wishForm" class="wform" novalidate>
+        <label class="wform__f"><span>Your name</span><input name="name" maxlength="60" autocomplete="name" required></label>
+        <label class="wform__f"><span>Your blessing</span><textarea name="text" rows="4" maxlength="600" required placeholder="Write something for Jhanvi &amp; Abhinav&hellip;"></textarea></label>
+        <label class="wform__trap" aria-hidden="true">Leave this empty<input name="website" tabindex="-1" autocomplete="off"></label>
+        <div class="wform__row"><button class="btn" type="submit">Send your blessing</button><span class="wform__count" aria-hidden="true">0 / 600</span></div>
+        <p class="wform__msg" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+    <div class="wishes__read">
+      <ul id="wishList" class="wlist" aria-label="Blessings from our people"></ul>
+      <button id="wishMore" class="btn btn--line wmore" type="button" hidden>Read more blessings</button>
+    </div>
+  </section>
+
+  <section id="album" class="album">
+    <div data-art="branch" class="album__branch"></div>
+    <div class="album__copy">
+      <p class="cap">Our album isn&rsquo;t finished</p>
+      <h2 class="album__title">You&rsquo;ll see moments<br><i>we&rsquo;ll miss.</i></h2>
+      <p class="album__lede">The stolen glances, the questionable dance moves, the aunties mid-laugh. Blurry, candid, half-eaten, we want all of it.</p>
+      <a id="driveCta" class="btn album__cta" target="_blank" rel="noopener">Add your photos</a>
+      <p id="driveNote" class="album__note">Opens our shared Google Drive folder. Tap <b>+</b>, choose your photos and videos, and you&rsquo;re in the film.</p>
+      <ul id="albumDays" class="album__days"></ul>
+    </div>
+    <div class="album__stack">
+      <figure class="aprint aprint--1" aria-hidden="true"><img src="assets/photos/laugh.webp" alt="" loading="lazy"></figure>
+      <figure class="aprint aprint--2" aria-hidden="true"><img src="assets/photos/selfie.webp" alt="" loading="lazy"></figure>
+      <figure class="aprint aprint--3" aria-hidden="true"><img src="assets/photos/velvet.webp" alt="" loading="lazy"></figure>
+      <a id="driveCard" class="aprint aprint--you" target="_blank" rel="noopener" aria-label="Add your photos to our album">
+        <span class="aprint__slot"><i class="aprint__plus"></i></span>
+        <span class="aprint__who">your photo here</span>
+      </a>
+    </div>
+  </section>
+
+  <section id="closing" class="closing">
+    <div data-art="tree" class="closing__tree"></div>
+    <p class="closing__lead">If we could go back to Class&nbsp;6&hellip;</p>
+    <p class="closing__p">We&rsquo;d tell those two kids that the ordinary days they&rsquo;re living will one day become the memories they&rsquo;ll treasure most.</p>
+    <p class="closing__p">That the friendship will become a first love. That the first love will grow up with them. And that, one day, they&rsquo;ll stand together, ready to choose each other for the rest of their lives.</p>
+    <p class="closing__big">Somehow, it was<br>always you.</p>
+    <p class="closing__sign">With love, Jhanvi &amp; Abhinav</p>
+    <p class="closing__date">05 · 12 · 2026</p>
+  </section>
+</main>
+
+<noscript><p style="padding:2rem;text-align:center">Jhanvi &amp; Abhinav are getting married on 5 December 2026. Please turn on JavaScript to read their story.</p></noscript>
+
+<script src="vendor/gsap.min.js?v=fa1aeabc"></script>
+<script src="vendor/ScrollTrigger.min.js?v=ecd3242f"></script>
+<script src="js/config.js?v=20372ec3"></script>
+<script src="js/monogram.js?v=bf5b8487"></script>
+<script src="js/ink.js?v=a1583a3b"></script>
+<script src="js/main.js?v=1ca51471"></script>
+</body>
+</html>
