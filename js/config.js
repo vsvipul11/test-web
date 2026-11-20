@@ -2,7 +2,6 @@
    Every word guests read lives here. Edit, save, refresh.
 
    STILL TO FILL IN:
-   - driveLink (the shared Google Drive folder for guests' photos)
    - the Vidai time, if there is one (an empty time is simply not shown)
 ------------------------------------------------------------------- */
 window.WEDDING = {
@@ -15,7 +14,7 @@ window.WEDDING = {
   city: '',    // shown after the venue on the invitation page, if filled in
 
   /* Paste your shared Google Drive folder link here. Until then the button reads "Album opens soon". */
-  driveLink: '',
+  driveLink: 'https://drive.google.com/drive/folders/18DJsR6Ba86TiutqCh_6f2PVzfvJsllHH',
 
   chapters: [
     { id: 'ch1a', pic: 'class6', seed: [.5, .42], label: 'Chapter one', deva: 'बचपन',
